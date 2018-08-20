@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
 
-import Form from '../components/forms/Login';
+import LoginForm from '../redux/containers/LoginForm';
 
-const Login = () => (
-  <Form title="Login" handleSubmit={(fn) => {fn();}}submit={() => {return 'damn';}}>
-      HI!
-  </Form>
+import type { ContextRouter } from 'react-router';
+
+const Login = (props: ContextRouter) => (
+  <LoginForm {...props}/>
 );
 
 export default Login;

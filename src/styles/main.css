@@ -65,3 +65,18 @@ body {
 .nvx-h-100 {
   height: 100vh;
 }
+
+/* ---- animations ---- */
+
+.nvx-error {
+  height: 0;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.nvx-error.visible {
+  overflow: hidden;
+  transition: 0.4s;
+  opacity: 1;
+  height: 40px;
+}

@@ -47,6 +47,10 @@ body {
   user-select: none;
 }
 
+.nvx-h-100 {
+  height: 100vh;
+}
+
 .nvx-space {
   margin-bottom: 15px;
   padding-top: 15px;
@@ -62,21 +66,98 @@ body {
   box-shadow: 0 0 10px #182F63;
 }
 
-.nvx-h-100 {
-  height: 100vh;
+.nvx-input-field {
+  border: 0; 
+  padding: 4px 0; 
+  border-bottom: 1px solid #E3E8F2; 
+  background-color: transparent;
+  z-index: 10;
+}
+
+.nvx-border {
+  position: absolute; 
+  bottom: 0%;
+  left: 0%;
+  height: 2px;
+  width: 0;
+  background-color: #182F63;
+  transition: 0.4s;
+  z-index: 10;
+}
+
+.nvx-placeholder {
+  position: absolute;
+  width: 100%;
+  color: #E3E8F2;
+  top: 25px;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
+  transition: 0.4s;
+  z-index: 5;
+  margin: 0
+}
+
+.nvx-button {
+  background: transparent;
+  border: 1px solid #E3E8F2;
+  color: #E3E8F2;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.nvx-button:hover {
+  border: 1px solid #182F63;
+  color: #182F63;
+  transition: 0.3s;
+  background: linear-gradient(-45deg, #ABC1F2, #3D74F2);;
+  letter-spacing: 2px;
+}
+
+.nvx-button:active {
+  background: #E3E8F2;
+}
+
+:focus {
+  outline: none;
+}
+
+/* TODO:- refactor */
+.no-valid:after {
+  content: ' - Required'
 }
 
 /* ---- animations ---- */
+
+.nvx-border-focus-enter-active {
+  width: 100%; 
+  transition: 0.4s;
+}
+
+.nvx-border-focus-enter-done {
+  width: 100%;
+}
+
+.nvx-placeholder-focus-enter-active {
+  top: 50px;
+  color: #182F63;
+  transition: 0.4s;
+}
+
+.nvx-placeholder-focus-enter-done {
+  top: 50px;
+  color: #182F63;
+}
 
 .nvx-error {
   height: 0;
   opacity: 0;
   transition: 0.4s;
+  max-width: 100px;
 }
 
 .nvx-error.visible {
   overflow: hidden;
   transition: 0.4s;
   opacity: 1;
-  height: 40px;
+  height: 85px;
 }

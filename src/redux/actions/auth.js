@@ -2,9 +2,9 @@
 import axios from 'axios';
 
 import type { Dispatch, ThunkAction } from '../../types/redux';
-import type { AuthData } from '../../types/auth';
+import type { AuthData, AuthActionType, Token } from '../../types/auth';
 
-import { AUTH_USER } from '../../types/actions';
+import { AUTH_RECIEVE, AUTH_REQUEST } from '../../types/actions';
 
 // ToTest:-
 if (!process.env.API_URL) {
@@ -24,17 +24,44 @@ const loginErrors = {
   '500': 'Unexpected error. Try again.'
 };
 
+export const authRequest = (): AuthActionType => ({
+  type: AUTH_REQUEST
+});
+
+export const authRecieve = (token: Token): AuthActionType => ({
+  type: AUTH_RECIEVE,
+  token
+});
+
+// TODO:- create a high order function for all of this
 export const login = (data: AuthData): ThunkAction => {
   return (dispatch: Dispatch) => {
     return axios.post(api + '/login', data, config)
       .then((response) => {
         const token = response.data.token;
-        dispatch({ type: AUTH_USER, token, user: null });
+        dispatch(authRecieve(token));
       })
       .catch((err) => {
         if (err.response) {
           const status = err.response.status;
           return loginErrors[status] || 'Unexpected.';
+        }
+      });
+  };
+};
+
+export const getAuthorization = (): ThunkAction => {
+  return (dispatch: Dispatch) => {
+    dispatch(authRequest());
+    return axios.get(api + '/me', config)
+      .then((response) => {
+        const token = response.data.token;
+        dispatch(authRecieve(token));
+      })
+      .catch((err) => {
+        // TODO:- handle 500 & 404 errors
+        if (err.response) {
+          dispatch(authRecieve(null));
         }
       });
   };

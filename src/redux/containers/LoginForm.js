@@ -35,7 +35,7 @@ class LoginForm extends Component<Props> {
 
   render() {
     const { handleSubmit, submitting, error } = this.props;
-    const { pathname } = this.props.location.novex ? this.props.location.novex.from : {};
+    const { pathname } = this.props.location.previous ? this.props.location.previous.from : {};
     return (
 
       <Form title="Login" handleSubmit={handleSubmit} submit={this.submit}>

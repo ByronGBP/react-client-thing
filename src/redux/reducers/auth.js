@@ -1,18 +1,26 @@
 // @flow
-import { AUTH_USER } from '../../types/actions';
+import { AUTH_USER, AUTH_REQUEST, AUTH_RECIEVE } from '../../types/actions';
 import type { AuthActionType, AuthAction, AuthState } from '../../types/auth';
 
 const INITIAL_STATE: AuthState = {
   token: null,
-  user: null
+  user: null,
+  fetching: true
 };
 
-const authUser = (state: AuthState, action: AuthAction): AuthState => {
-  return { ...state, token: action.token, user: action.user };
+//NOTE:- putting fetching to false makes guard render the WrappedComponent before auth
+//TODO:- Fix -> With a new action method shouldGetAuth or new reducer only for fetching
+const authRecieve = (state: AuthState, action: AuthAction): AuthState => {
+  return { ...state, token: action.token, fetching: false };
+};
+
+const authRequest = (state: AuthState, action: AuthAction): AuthState => {
+  return { ...state, fetching: true};
 };
 
 const reducers: { [AuthActionType]: (state: AuthState, action: AuthAction) => AuthState } = {
-  AUTH_USER: authUser
+  AUTH_RECIEVE: authRecieve,
+  AUTH_REQUEST: authRequest
 };
 
 export const authReducer = (state: AuthState = INITIAL_STATE, action: AuthAction): AuthState => {

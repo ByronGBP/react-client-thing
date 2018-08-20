@@ -11,6 +11,7 @@ import type { AuthData } from '../../types/auth';
 import { login } from '../actions/auth';
 
 import Form from '../../components/forms/Form';
+import Input from '../../components/forms/Input';
 
 type Props = {
   login: () => any
@@ -18,6 +19,7 @@ type Props = {
 
 class LoginForm extends Component<Props> {
 
+  // TODO:- Fix -> Bind on constructor give flow-typed errors
   submit = (data: AuthData) => {
     return this.props.login(data)
       .then((error) => {
@@ -41,13 +43,13 @@ class LoginForm extends Component<Props> {
           label="Username"
           name="username"
           type="text"
-          component="input"
+          component={Input}
         />
         <Field
           label="Password"
           name="password"
           type="password"
-          component="input"
+          component={Input}
         />
         <div className={`nvx-space nvx-error ${error ? 'visible' : ''}`}>
           <strong>{error}</strong>
@@ -62,6 +64,7 @@ class LoginForm extends Component<Props> {
 }
 
 // TODO:- figure it out where to put this
+// TODO:- change to field-level validation
 const validate = values => {
   const errors = {};
   if (!values.username) {

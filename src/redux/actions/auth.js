@@ -4,7 +4,7 @@ import axios from 'axios';
 import type { Dispatch, ThunkAction } from '../../types/redux';
 import type { AuthData } from '../../types/auth';
 
-import { AUTH_USER, FETCHING_AUTH } from '../../types/actions';
+import { AUTH_USER } from '../../types/actions';
 
 // ToTest:-
 if (!process.env.API_URL) {
@@ -15,7 +15,6 @@ const api = `${process.env.API_URL}/auth`;
 const config = {
   withCredentials: true
 };
-
 
 // TODO:- figure it out where to put this
 const loginErrors = {

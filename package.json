@@ -5,9 +5,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "webpack --config webpack.config.js --watch & webpack-dev-server --config webpack.config.js --mode development",
-    "flow": "flow",
-    "test": "jest",
-    "flow-status": "flow status"
+    "flow": "flow-watch",
+    "test": "jest"
   },
   "author": "ByronGBP",
   "license": "ISC",
@@ -40,7 +39,12 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-form": "^7.4.2",
+    "redux-thunk": "^2.3.0"
   }
 }

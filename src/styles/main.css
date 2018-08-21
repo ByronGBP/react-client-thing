@@ -61,6 +61,12 @@ body {
   padding-top: 15px;
 }
 
+.nvx-img {
+  max-width: 20%;
+  /** TODO:- refactor! **/
+  margin-right: 15px;
+}
+
 .nvx-form-container {
   border: 1px solid transparent;
   border-radius: 10px;
@@ -129,6 +135,10 @@ body {
 /* TODO:- refactor */
 .no-valid:after {
   content: ' - Required'
+}
+
+.nvx-hover-click:hover {
+  cursor: pointer;
 }
 
 /* ---- animations ---- */

@@ -66,3 +66,18 @@ export const getAuthorization = (): ThunkAction => {
       });
   };
 };
+
+export const logout = (): ThunkAction => {
+  return (dispatch: Dispatch) => {
+    return axios.post(api + '/logout', {}, config)
+      .then((response) => {
+        dispatch(authRecieve(null));
+      })
+      .catch((err) => {
+        if (err.response) {
+          // TODO:- handle 401 error
+          return err.response.data.error;
+        }
+      });
+  };
+};

@@ -67,6 +67,7 @@ export const getAuthorization = (): ThunkAction => {
   };
 };
 
+//NOTE:- when logout news still being in state
 export const logout = (): ThunkAction => {
   return (dispatch: Dispatch) => {
     return axios.post(api + '/logout', {}, config)

@@ -1,5 +1,5 @@
 // @flow
-import { AUTH_USER, AUTH_REQUEST, AUTH_RECIEVE } from '../../types/actions';
+import { AUTH_REQUEST, AUTH_RECIEVE } from '../../types/actions';
 import type { AuthActionType, AuthAction, AuthState } from '../../types/auth';
 
 const INITIAL_STATE: AuthState = {

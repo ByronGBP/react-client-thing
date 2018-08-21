@@ -4,9 +4,11 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from './Login';
+import News from './News';
 import NotFound from './NotFound';
 
 import AnonRoute from '../components/routes/AnonRoute';
+import AuthRoute from '../components/routes/AuthRoute';
 import InitRoute from '../components/routes/InitRoute';
 
 import store from '../redux/index';
@@ -15,7 +17,8 @@ const Root = () => (
   <Provider store={store}>
     <Router>
       <Switch>
-        <AnonRoute path="/login" component={Login} />
+        <AuthRoute path="/" exact component={News} />
+        <AnonRoute path="/login" exact component={Login} />
         <InitRoute component={NotFound} />
       </Switch>
     </Router>

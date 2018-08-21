@@ -35,8 +35,13 @@ button {
   letter-spacing: 1px;
 }
 
-.nvx-text {
+.nvx-title {
   font-size: 2em;
+}
+
+.nvx-text {
+  letter-spacing: 0;
+  text-align: center;
 }
 
 /* ---- layout ---- */
@@ -159,5 +164,5 @@ body {
   overflow: hidden;
   transition: 0.4s;
   opacity: 1;
-  height: 85px;
+  height: 70px;
 }

@@ -1,11 +1,13 @@
 //@flow
 import type { Store as ReduxStore, Dispatch as ReduxDispatch } from 'redux';
 import type { AuthAction, AuthState } from './auth';
+import type { ApiAction, ApiState } from './api';
 
 export type State = {
-  auth: AuthState
+  auth: AuthState,
+  api: ApiState
 };
-export type Action = AuthAction;
+export type Action = AuthAction | ApiAction;
 
 // Redux and Dispatch Store has a generic State an Action
 export type Store = ReduxStore<State, Action>

@@ -1,9 +1,9 @@
 // @flow
-import { AUTH_USER, AUTH_REQUEST, AUTH_RECIEVE } from './actions';
+import { AUTH_REQUEST, AUTH_RECIEVE } from './actions';
 
 export type Token = string | null;
 
-export type AuthActionType = AUTH_USER | AUTH_REQUEST | AUTH_RECIEVE;
+export type AuthActionType = AUTH_REQUEST | AUTH_RECIEVE;
 
 export type AuthData = {
   username: string,

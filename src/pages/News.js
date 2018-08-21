@@ -3,7 +3,7 @@ import React from 'react';
 
 import { withHeader } from '../hoc/withHeader';
 
-import NewsList from '../components/news/NewsList';
+import NewsList from '../redux/containers/NewsList';
 
 const News = () => (
   <NewsList/>

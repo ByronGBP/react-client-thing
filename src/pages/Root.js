@@ -17,7 +17,7 @@ const Root = () => (
   <Provider store={store}>
     <Router>
       <Switch>
-        <AuthRoute path="/" exact component={News} />
+        <AuthRoute path="/news" exact component={News} />
         <AnonRoute path="/login" exact component={Login} />
         <InitRoute component={NotFound} />
       </Switch>

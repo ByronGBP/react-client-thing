@@ -1,10 +1,9 @@
 // @flow
 import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
 
 const NotFound = () => (
-  <div>
-    404 - Not found!
-  </div>
+  <Redirect to="/login" />
 );
 
 export default NotFound;

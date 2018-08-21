@@ -28,7 +28,7 @@ class LoginForm extends Component<Props> {
             _error: error,
           });
         } else {
-          this.props.history.push('/');
+          this.props.history.push('/news');
         }
       });
   }
@@ -36,6 +36,7 @@ class LoginForm extends Component<Props> {
   render() {
     const { handleSubmit, submitting, error } = this.props;
     const { pathname } = this.props.location.previous ? this.props.location.previous.from : {};
+    debugger;
     return (
 
       <Form title="Login" handleSubmit={handleSubmit} submit={this.submit}>
@@ -51,13 +52,15 @@ class LoginForm extends Component<Props> {
           type="password"
           component={Input}
         />
-        <div className={`nvx-space nvx-error ${error ? 'visible' : ''}`}>
+        <div className={`nvx-space nvx-error nvx-text ${error ? 'visible' : ''}`}>
           <strong>{error}</strong>
         </div>
-        <div className="d-flex align-items-center justify-content-center nvx-space">
+        <div className="d-flex align-items-center justify-content-center">
           <button className="nvx-button" disabled={submitting}>Login!</button>
+        </div>   
+        <div className={`nvx-space nvx-error nvx-text ${pathname ? 'visible' : ''}`}>
+            Please, login to see <strong>{pathname}</strong>
         </div>
-        {pathname}
       </Form>
     );
   }

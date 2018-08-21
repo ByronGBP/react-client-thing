@@ -23,8 +23,7 @@ class AnonRoute extends Component<Props> {
       return <Route component={component} {...this.props} />;
     } else {
       const direction = {
-        pathname: "/",
-        previous: { from: this.props.location }
+        pathname: "/news"
       };
       return <Redirect to={direction} />;
     }

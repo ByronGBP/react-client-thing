@@ -1,7 +1,7 @@
 // @flow
-import { API_REQUEST, NEWS_RECIEVE } from './actions';
+import { API_REQUEST, ALL_NEWS_RECIEVE, NEWS_RECIEVE } from './actions';
 
-export type ApiActionType = API_REQUEST | NEWS_RECIEVE;
+export type ApiActionType = API_REQUEST | ALL_NEWS_RECIEVE | NEWS_RECIEVE;
 
 export type News = {
   content: string,

@@ -14,15 +14,13 @@ type State = {
 }
 
 class Input extends Component<Props, State> {
-
   state = {
     focus: false,
     isValidClass: ''
   }
 
-  // TODO:- Fix -> Bind on constructor give flow-typed errors
+  //TODO:- Fix -> Bind on constructor give flow-typed errors
   onFocus = () => {
-
     const newState: any = {
       focus: true
     };

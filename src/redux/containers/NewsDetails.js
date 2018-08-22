@@ -32,7 +32,6 @@ class NewsDetailContainer extends Component<Props> {
   }
 }
 
-
 const mapStateToProps = (state: State) => {
   const news = state.api.aNews;
   return {

@@ -4,14 +4,14 @@ import { SubmissionError, Field, reduxForm } from 'redux-form';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
+import Form from '../../components/forms/Form';
+import Input from '../../components/forms/Input';
+
 import type { FieldProps } from 'redux-form';
 import type { ContextRouter } from 'react-router';
 import type { AuthData } from '../../types/auth';
 
 import { login } from '../actions/auth';
-
-import Form from '../../components/forms/Form';
-import Input from '../../components/forms/Input';
 
 import { formatPath } from '../../utils/misc';
 

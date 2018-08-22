@@ -15,7 +15,6 @@ type Props = {
 }
 
 class NewsListContainer extends Component<Props> {
-
   componentDidMount() {
     this.props.getAllNews();
   }
@@ -28,9 +27,7 @@ class NewsListContainer extends Component<Props> {
       return <NewsList news={news} {...rest} />;
     }
   }
-
 }
-
 
 const mapStateToProps = (state: State) => {
   const news = state.api.allNews;

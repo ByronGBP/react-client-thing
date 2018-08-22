@@ -9,7 +9,7 @@ export type State = {
 };
 export type Action = AuthAction | ApiAction;
 
-// Redux and Dispatch Store has a generic State an Action
+// Redux and Dispatch Store has a generic State and Action
 export type Store = ReduxStore<State, Action>
 export type Dispatch = ReduxDispatch<Action> & ThunkAction;
 

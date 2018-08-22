@@ -16,7 +16,7 @@ const config = {
   withCredentials: true
 };
 
-// TODO:- figure it out where to put this
+//TODO:- figure it out where to put this
 const loginErrors = {
   '401': 'You seems to been already logged.',
   '422': 'All fields are required.',
@@ -33,7 +33,7 @@ export const authRecieve = (token: Token): AuthActionType => ({
   token
 });
 
-// TODO:- create a high order function for all of this
+//TODO:- create a high order function for all of this
 export const login = (data: AuthData): ThunkAction => {
   return (dispatch: Dispatch) => {
     return axios.post(api + '/login', data, config)
@@ -59,7 +59,7 @@ export const getAuthorization = (): ThunkAction => {
         dispatch(authRecieve(token));
       })
       .catch((err) => {
-        // TODO:- handle 500 & 404 errors
+        //TODO:- handle 500 & 404 errors
         if (err.response) {
           dispatch(authRecieve(null));
         }
@@ -67,7 +67,7 @@ export const getAuthorization = (): ThunkAction => {
   };
 };
 
-//NOTE:- when logout news still being in state
+//TODO:- FIX -> when logout news still being in state
 export const logout = (): ThunkAction => {
   return (dispatch: Dispatch) => {
     return axios.post(api + '/logout', {}, config)
@@ -76,7 +76,7 @@ export const logout = (): ThunkAction => {
       })
       .catch((err) => {
         if (err.response) {
-          // TODO:- handle 401 error
+          //TODO:- handle 401 error
           return err.response.data.error;
         }
       });

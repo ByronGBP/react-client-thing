@@ -1,6 +1,6 @@
 // @flow
 import type { ApiData, ApiActionType, News, ApiState, ApiAction } from '../../types/api';
-import { API_REQUEST, NEWS_RECIEVE } from '../../types/actions';
+import { API_REQUEST, ALL_NEWS_RECIEVE, NEWS_RECIEVE } from '../../types/actions';
 
 const INITIAL_STATE: ApiState = {
   allNews: null,
@@ -8,17 +8,22 @@ const INITIAL_STATE: ApiState = {
   fetching: false
 };
 
-const newsRecieve = (state: ApiState, action: ApiAction): ApiState => {
+const allNewsRecieve = (state: ApiState, action: ApiAction): ApiState => {
   return { ...state, allNews: action.allNews, fetching: false };
 };
 
-const newsRequest = (state: ApiState, action: ApiAction): ApiState => {
+const newsRecieve = (state: ApiState, action: ApiAction): ApiState => {
+  return { ...state, aNews: action.aNews, fetching: false };
+};
+
+const apiRequest = (state: ApiState, action: ApiAction): ApiState => {
   return { ...state, fetching: true };
 };
 
 const reducers: { [ApiActionType]: (state: ApiState, action: ApiAction) => ApiState } = {
+  ALL_NEWS_RECIEVE: allNewsRecieve,
   NEWS_RECIEVE: newsRecieve,
-  API_REQUEST: newsRequest
+  API_REQUEST: apiRequest
 };
 
 export const apiReducer = (state: ApiState = INITIAL_STATE, action: ApiAction): ApiState => {

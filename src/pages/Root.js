@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from './Login';
 import News from './News';
+import SingleNews from './SingleNews';
 import NotFound from './NotFound';
 
 import AnonRoute from '../components/routes/AnonRoute';
@@ -18,6 +19,7 @@ const Root = () => (
     <Router>
       <Switch>
         <AuthRoute path="/news" exact component={News} />
+        <AuthRoute path="/news/:id" exact component={SingleNews} />
         <AnonRoute path="/login" exact component={Login} />
         <InitRoute component={NotFound} />
       </Switch>

@@ -29,6 +29,7 @@ export const newsRecieve = (aNews: News): ApiActionType => ({
   aNews
 });
 
+//TODO:- Create an action shouldGetAllNews for no make unnecessary request
 export const getAllNews = (): ThunkAction => {
   return (dispatch: Dispatch) => {
     dispatch(apiRequest());

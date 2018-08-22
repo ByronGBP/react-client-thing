@@ -2,7 +2,7 @@
 import { AUTH_REQUEST, AUTH_RECIEVE } from '../../types/actions';
 import type { AuthActionType, AuthAction, AuthState } from '../../types/auth';
 
-const INITIAL_STATE: AuthState = {
+export const INITIAL_STATE: AuthState = {
   token: null,
   user: null,
   fetching: true

@@ -2,7 +2,7 @@
 import type { ApiData, ApiActionType, News, ApiState, ApiAction } from '../../types/api';
 import { API_REQUEST, ALL_NEWS_RECIEVE, NEWS_RECIEVE } from '../../types/actions';
 
-const INITIAL_STATE: ApiState = {
+export const INITIAL_STATE: ApiState = {
   allNews: null,
   aNews: null,
   fetching: false

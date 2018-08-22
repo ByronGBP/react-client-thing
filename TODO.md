@@ -2,11 +2,11 @@
 - Everything on `TODO:-`
 - Clean `news` from state when unmount
 - Figure it out how to handle `.list-group-item:first-child` for mobile
-- Fix error on mobile on 
+- Fix error on mobile version
 - Tests for containers
 - Tests for components
 - User can create news
 - User can edit news
 - User can delete news
-- Compatible with others browsers but Chrome
+- Compatibility with browsers other than Chrome
 - Isomorphic version

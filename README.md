@@ -17,23 +17,23 @@
 - redux-form
   - easy form state transfer with redux methods
 - flow-typed
-  - statics types for easy debug
+  - statics types for easy debugging
 - axios
-  - requests purposes
+  - request purposes
 - react-transition-group
-  - animations purposes
+  - animation purposes
 - jest & nock & redux-mock-store
-  - tests purposes
+  - test purposes
 - boilerplate 
-  - take it from [here](https://github.com/ByronGBP/empty-project-react)
+  - taken from [here](https://github.com/ByronGBP/empty-project-react)
 
 # Make it work
-- download the [API](https://github.com/ByronGBP/server-jwt-shet)
+- download & run the [API](https://github.com/ByronGBP/server-jwt-shet)
 - `.env` with `API_URL="http://yourlocalthing:portthing`
 - `npm run dev`
 
 # Tests
-- `npm test` (only actions and reduces tested)
+- `npm test` (only actions and reducers tested)
 
 # Board
 - [!!!](https://trello.com/b/4dVLMkov/fw-client)

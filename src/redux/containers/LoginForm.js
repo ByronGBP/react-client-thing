@@ -13,6 +13,8 @@ import { login } from '../actions/auth';
 import Form from '../../components/forms/Form';
 import Input from '../../components/forms/Input';
 
+import { formatPath } from '../../utils/misc';
+
 type Props = {
   login: () => any
 } & FieldProps & ContextRouter
@@ -36,7 +38,6 @@ class LoginForm extends Component<Props> {
   render() {
     const { handleSubmit, submitting, error } = this.props;
     const { pathname } = this.props.location.previous ? this.props.location.previous.from : {};
-    debugger;
     return (
 
       <Form title="Login" handleSubmit={handleSubmit} submit={this.submit}>
@@ -59,8 +60,7 @@ class LoginForm extends Component<Props> {
           <button className="nvx-button" disabled={submitting}>Login!</button>
         </div>   
         <div className={`nvx-space nvx-error nvx-text ${pathname ? 'visible' : ''}`}>
-          {/**TODO:- format pathname **/}
-            Please, login to see <strong>{pathname}</strong>
+          Please, login to see <strong>{pathname && formatPath(pathname)}</strong>
         </div>
       </Form>
     );

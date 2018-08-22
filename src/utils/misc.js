@@ -5,3 +5,11 @@ export const formatDate = (date) => {
   const formatedDate = DDMMYY.join('/');
   return formatedDate;
 };
+
+//Will format from /news/5b7c67febe8be03231c99653 to news or "where you come from"
+export const formatPath = (path) => {
+  if (path.includes('news')) {
+    return 'news';
+  }
+  return 'where you come from';
+};

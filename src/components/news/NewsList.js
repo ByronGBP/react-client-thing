@@ -9,13 +9,12 @@ type Props = {
   news: [News]
 }
 
-const NewsList = ({ news }: Props) => (
+const NewsList = ({ news, ...rest }: Props) => (
   <div className="d-flex justify-content-center nvx-space">
     <div className="list-group w-75">
       {news.map((elem) => {
-        return <NewsItem key={elem._id} news={elem}/>;
+        return <NewsItem {...rest} key={elem._id} news={elem}/>;
       })}
-      
     </div>
   </div>
 );

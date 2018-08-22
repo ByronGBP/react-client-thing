@@ -6,11 +6,11 @@ import type { ApiData, ApiActionType, News } from '../../types/api';
 import { API_REQUEST, ALL_NEWS_RECIEVE, NEWS_RECIEVE } from '../../types/actions';
 
 // ToTest:-
-if (!process.env.API_URL) {
-  throw new Error('API_URL not provided');
-}
+// if (!process.env.API_URL) {
+//   throw new Error('API_URL not provided');
+// }
 
-const api = `${process.env.API_URL}/api/news`;
+const api = `${API_URL}/api/news`;
 const config = {
   withCredentials: true
 };

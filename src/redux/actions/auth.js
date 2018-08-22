@@ -7,11 +7,11 @@ import type { AuthData, AuthActionType, Token } from '../../types/auth';
 import { AUTH_RECIEVE, AUTH_REQUEST } from '../../types/actions';
 
 // ToTest:-
-if (!process.env.API_URL) {
-  throw new Error('API_URL not provided');
-}
+// if (!process.env.API_URL) {
+//   throw new Error('API_URL not provided');
+// }
 
-const api = `${process.env.API_URL}/auth`;
+const api = `${API_URL}/auth`;
 const config = {
   withCredentials: true
 };

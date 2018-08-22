@@ -4,6 +4,8 @@ import React from 'react';
 import type { ContextRouter } from 'react-router';
 import type { News } from '../../types/api';
 
+import { formatDate } from '../../utils/misc';
+
 type Props = {
   news: News
 } & ContextRouter
@@ -22,7 +24,7 @@ const NewsItem = ({ news, history }: Props) => {
         <div className="d-flex align-items-center w-100">
           <div className="d-flex w-100 justify-content-between">
             <h5 className="mb-1">{news.title}</h5>
-            <small>{news.date}</small>
+            <small>{formatDate(news.date)}</small>
           </div>
         </div>
       </div>

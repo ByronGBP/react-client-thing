@@ -3,6 +3,8 @@ import React from 'react';
 
 import type { News } from '../../types/api';
 
+import { formatDate } from '../../utils/misc';
+
 type Props = {
   news: News
 }
@@ -17,7 +19,7 @@ const NewsDetails = ({ news }: Props) => (
       <div className="card-body">
         <h5 className="card-title text-center">{news.title}</h5>
         <div className="d-flex w-100 justify-content-end mb-3">
-          <small>{news.date}</small>
+          <small>{formatDate(news.date)}</small>
         </div>
         <p className="mb-1">{news.content}</p>
       </div>

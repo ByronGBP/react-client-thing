@@ -3,7 +3,10 @@
 
 # Try it live!
 - [!!!](https://fw-client-ti.herokuapp.com)
-
+```
+  username: user 
+  password: FCtb2PGbHpgq
+```
 # Libraries
 - react
 - react-router

@@ -59,6 +59,7 @@ class LoginForm extends Component<Props> {
           <button className="nvx-button" disabled={submitting}>Login!</button>
         </div>   
         <div className={`nvx-space nvx-error nvx-text ${pathname ? 'visible' : ''}`}>
+          {/**TODO:- format pathname **/}
             Please, login to see <strong>{pathname}</strong>
         </div>
       </Form>

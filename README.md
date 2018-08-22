@@ -19,7 +19,7 @@
   - requests purposes
 - react-transition-group
   - animations purposes
-- jest
+- jest & nock & redux-mock-store
   - tests purposes
 - boilerplate 
   - take it from [here](https://github.com/ByronGBP/empty-project-react)

@@ -14,7 +14,6 @@ type Props = {
 class InitRoute extends Component<Props> {
 
   render() {
-    console.log('from InitRoute');
     const { component } = this.props;
 
     return <Route component={component} {...this.props} />;

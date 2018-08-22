@@ -25,7 +25,6 @@ export const guard = (WrappedComponent: ComponentType<any>) => {
     }
 
     render() {
-      console.log('from guard');
       const { isFetching } = this.props;
       if (isFetching) {
         return <div>Loading...</div>;

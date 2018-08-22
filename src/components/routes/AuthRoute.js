@@ -16,7 +16,6 @@ type Props = {
 class AuthRoute extends Component<Props> {
 
   render() {
-    console.log('from AuthRoute');
     const { component, isAuthorize } = this.props;
 
     if (isAuthorize) {

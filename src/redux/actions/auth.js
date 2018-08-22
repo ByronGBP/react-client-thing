@@ -6,10 +6,10 @@ import type { AuthData, AuthActionType, Token } from '../../types/auth';
 
 import { AUTH_RECIEVE, AUTH_REQUEST } from '../../types/actions';
 
-// ToTest:-
-// if (!process.env.API_URL) {
-//   throw new Error('API_URL not provided');
-// }
+// $FlowFixMe
+if (!API_URL) {
+  throw new Error('API_URL not provided');
+}
 
 const api = `${API_URL}/auth`;
 const config = {

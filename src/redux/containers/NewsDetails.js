@@ -24,7 +24,6 @@ class NewsDetailContainer extends Component<Props> {
 
   render() {
     const { news } = this.props;
-    console.log(news, 'damn');
     if (!news) {
       return <div>Loading...</div>;
     } else {

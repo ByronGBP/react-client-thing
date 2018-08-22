@@ -16,7 +16,6 @@ type Props = {
 class AnonRoute extends Component<Props> {
 
   render() {
-    console.log('from AnonRoute');
     const { component, isAuthorize } = this.props;
 
     if (!isAuthorize) {

@@ -26,7 +26,6 @@ class AuthRoute extends Component<Props> {
         pathname: "/login",
         previous: { from: this.props.location }
       };
-      debugger;
       return <Redirect to={direction} />;
     }
   }

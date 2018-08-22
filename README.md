@@ -29,6 +29,9 @@
 - `.env` with `API_URL="http://yourlocalthing:portthing`
 - `npm run dev`
 
+# Tests
+- `npm test` (only actions and reduces tested)
+
 # Board
 - [!!!](https://trello.com/b/4dVLMkov/fw-client)
 

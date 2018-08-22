@@ -1,8 +1,12 @@
 # TODO
 - Everything on `TODO:-`
 - Clean `news` from state when unmount
+- Figure it out how to handle `.list-group-item:first-child` for mobile
+- Fix error on mobile on 
 - Tests for components
 - Tests for containers
 - User can create news
 - User can edit news
 - User can delete news
+- Compatible with others browsers but Chrome
+- Isomorphic version

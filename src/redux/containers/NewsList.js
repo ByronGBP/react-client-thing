@@ -6,7 +6,7 @@ import NewsList from '../../components/news/NewsList';
 
 import { getAllNews } from '../actions/api';
 
-import type { State, Dispatch } from '../../types/redux';
+import type { State } from '../../types/redux';
 import type { News } from '../../types/api';
 
 type Props = {
@@ -21,12 +21,11 @@ class NewsListContainer extends Component<Props> {
   }
 
   render () {
-    const { news } = this.props;
-    console.log(news);
+    const { news, getAllNews, ...rest } = this.props;
     if (!news) {
       return <div>Loading...</div>;
     } else {
-      return <NewsList news={news}/>;
+      return <NewsList news={news} {...rest} />;
     }
   }
 
